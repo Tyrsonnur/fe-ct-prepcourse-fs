@@ -5,6 +5,16 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
+   var x = 29
+   var y = 29
+
+   if (x > y) {
+      console.log(x + " " + " Es mayor que " + " " + y)
+   } else if (x < y) {
+      console.log(y + " Es mayor que " + x);
+   } else {
+      console.log(x + " y " + y + " son iguales ");
+   }
 }
 
 function mayoriaDeEdad(edad) {
@@ -12,8 +22,14 @@ function mayoriaDeEdad(edad) {
    // Si tiene 18 años ó más debe retornar el string: "Allowed".
    // Caso contrario: "Not allowed".
    // Tu código:
-}
+   var x = 18
 
+   if (x >= 18) {
+      console.log("Allowed to enter")
+   } else {
+      console.log("Not allowed to enter")
+   }
+}
 function conection(status) {
    // El argumento "status" representa el estado de conexión de un usuario.
    // Si el estado es igual a 1, el usuario está "Online".
@@ -21,6 +37,17 @@ function conection(status) {
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
    // Tu código:
+   var x = "Away"
+
+   if (x === 1) {
+      console.log(" User is Online ")
+   }
+   else if (x === 2) {
+      console.log(" User is Away ")
+   }
+   else {
+      console.log(" User is Offline ")
+   }
 }
 
 function saludo(idioma) {
@@ -30,6 +57,19 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
+   var x = "mandarin"
+
+   if (x === "aleman") {
+      console.log(" Guten Tag! ")
+   }
+   else if (x === "mandarin") {
+      console.log(" Ni Hao! ")
+   }
+   else if (x === "ingles") {
+      console.log(" Hello! ")
+   } else {
+      console.log(" Hola! ")
+   }
 }
 
 function colors(color) {
@@ -41,19 +81,60 @@ function colors(color) {
    // Si no es ninguno de esos colores           --> "Color not found".
    // IMPORTANTE: utilizar el statement SWITCH.
    // Tu código:
+   var color = "purple"
+
+   switch (color) {
+
+      case "red":
+         console.log(" This is red");
+         break;
+
+      case "blue":
+         console.log(" This is blue");
+         break;
+
+      case "orange":
+         console.log(" This is orange");
+         break;
+
+      case "green":
+         console.log(" This is green");
+         break;
+
+      default:
+         console.log(" color not found");
+         break;
+   }
 }
 
 function esDiezOCinco(num) {
    // Retornar true si "num" es 10 o 5.
    // De lo contrario, retornar false.
    // Tu código:
+   var num = 10
+
+   if (num === 5 || num === 10) {
+      console.log(true);
+   } else {
+      console.log(false);
+   }
 }
 
 function estaEnRango(num) {
    // Retornar true si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar false.
    // Tu código:
+
+   var num = 51
+
+   if (num > 20 && num < 50) {
+      console.log(true);
+   } else {
+      console.log(false);
+   }
+
 }
+
 
 function esEntero(num) {
    // Retornar true si "num" es un entero, ya sea positivo, negativo o cero.
@@ -62,6 +143,14 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
+
+   var numero = 90
+
+   if (numero === Math.floor(numero)) {
+      console.log(true);
+   } else {
+      console.log(false);
+   }
 }
 
 function fizzBuzz(num) {
@@ -70,6 +159,18 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   var numero = 5
+
+   if (numero % 3 === 0 && numero % 5 === 0) {
+      console.log(" Fizzbuzz ");
+   } else if (numero % 3 === 0) {
+      console.log(" Fizz ")
+   }
+   else if (numero % 5 === 0) {
+      console.log(" Buzz ");
+   } else {
+      console.log(numero)
+   }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -80,6 +181,22 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+
+   var num1 = 0
+   var num2 = 0
+   var num3 = 0
+
+   if (num1 > num2 && num1 > num3 && num1 > 0) {
+      console.log(" Numero 1 es mayor y positivo ")
+   } else if (num1 < 0 || num2 < 0 || num3 < 0) {
+      console.log("Hay negativos");
+   } else if (num3 > num1 && num3 > num2) {
+      console.log(num3 + 1)
+   } else if (num1 === 0 && num2 === 0 && num3 === 0) {
+      console.log(" Error ")
+   } else {
+      console.log(false);
+   }
 }
 
 function esPrimo(num) {
@@ -89,18 +206,49 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   var numero = 2
+
+   if (numero === 2) {
+      console.log(true)
+   }
+   else if (numero < 2) {
+      console.log(false)
+   } for (var i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+         console.log(false)
+      }
+   }
 }
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   var valor = "Arsenal"
+
+   if (valor === true) {
+      console.log(" soy verdadero ")
+   } else if (valor === false) {
+      console.log(" Soy falso ")
+   } else[
+      console.log(" por favor ingrese un valor valido ")
+   ]
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+
+   var numero = ("99")
+
+   if (numero > 99 && numero < 1000) {
+      console.log(true)
+   }
+   else[
+      console.log(false)
+   ]
+
 }
 
 function doWhile(num) {
@@ -108,6 +256,15 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var num = 3;
+   var limite = 8;
+   var suma = 0;
+
+   do {
+      limite += 5;
+      suma -= 1;
+   } while (limite !== 0)
+   console.log(num + suma);
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
